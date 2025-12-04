@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLogic: Survival Mode</title>
+    <!-- LINK TO EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="game-container">
+    
+    <!-- Top Stats -->
+    <div class="stats-capsule">
+        <div class="stat-group">
+            <span class="stat-label">Health</span>
+            <div class="bar-container">
+                <div id="bar-health" class="bar-fill" style="background: var(--danger-red); width: 100%;"></div>
+            </div>
+        </div>
+        <div class="stat-group">
+            <span class="stat-label">Energy</span>
+            <div class="bar-container">
+                <div id="bar-energy" class="bar-fill" style="background: var(--energy-orange); width: 100%;"></div>
+            </div>
+        </div>
+        <div class="stat-group">
+            <span class="stat-label">Env.</span>
+            <div class="bar-container">
+                <div id="bar-env" class="bar-fill" style="background: var(--env-green); width: 100%;"></div>
+            </div>
+        </div>
+        <button class="quit-btn" onclick="location.reload()">Quit</button>
+    </div>
+
+    <!-- Main Glass Card with Dynamic Backgrounds -->
+    <div class="glass-card bg-start">
+        
+        <!-- START SCREEN -->
+        <div id="screen-start" class="screen active">
+            <h1 class="title-large">EcoLogic</h1>
+            <p class="subtitle">Rainforest Survival</p>
+            <p class="description">
+                Survive the 24-hour cycle of the rainforest.<br><br>
+                Balance <strong>Health</strong>, <strong>Energy</strong>, and <strong>Environment</strong> while managing humidity and random events.
+            </p>
+            <button class="btn-primary" onclick="game.start()">Enter Jungle</button>
+        </div>
+
+        <!-- CONTEXT / LEARN SCREEN -->
+        <div id="screen-context" class="screen">
+            <h2 class="title-large" style="font-size: 1.5rem; margin-bottom: 5px;" id="period-title">Morning</h2>
+            <p class="description" id="context-desc">...</p>
+            
+            <div class="learn-box">
+                <div class="learn-header">SURVIVAL TIP:</div>
+                <div class="learn-text" id="context-tip">...</div>
+            </div>
+
+            <button class="btn-primary" onclick="game.startPhase()">Begin Phase</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="screen-quiz" class="screen">
+            <div id="quiz-header">
+                <div id="quiz-score" class="quiz-score">Score: 0</div>
+                <button id="double-points-btn" class="btn-secondary" onclick="game.toggleDoublePoints()">✨ 2x Points (5⚡)</button>
+            </div>
+            <div id="event-alert" class="event-alert">
+                <div class="event-title">⚠️ EVENT</div>
+                <div class="event-desc" id="event-msg">Mosquito swarm!</div>
+            </div>
+
+            <p class="description" style="margin-bottom: 15px; font-weight: 600;" id="question-text">Loading...</p>
+            
+            <div class="quiz-options" id="options-list">
+                <!-- Options injected via JS -->
+            </div>
+
+            <div id="action-area" class="action-modal">
+                <p style="font-size: 0.8rem; color: #cbd5e1; text-align: center;">Choose a recovery action:</p>
+                <div class="action-row">
+                    <button class="action-btn act-drink" onclick="game.action('drink')">💧 Drink<br><span style="font-size:0.6rem">+Health</span></button>
+                    <button class="action-btn act-rest" onclick="game.action('rest')">⛺ Rest<br><span style="font-size:0.6rem">+Energy</span></button>
+                    <button class="action-btn act-clean" onclick="game.action('clean')">🌿 Clean<br><span style="font-size:0.6rem">+Env</span></button>
+                </div>
+                <button class="btn-primary" style="font-size:0.9rem; padding: 12px;" onclick="game.nextQuestion()">Continue</button>
+            </div>
+        </div>
+
+        <!-- GAME OVER SCREEN -->
+        <div id="screen-over" class="screen">
+            <h1 class="title-large" id="end-title">Game Over</h1>
+            <p class="description" id="end-reason">You ran out of energy.</p>
+            <p class="subtitle">Correct Answers: <span id="end-correct">0</span></p>
+            <p class="subtitle">Final Score: <span id="end-score">0</span></p>
+            <button class="btn-primary" onclick="location.reload()">Try Again</button>
+        </div>
+
+    </div>
+
+    <!-- Weather Effects Container -->
+    <div id="weather-fx"></div>
+
+</div>
+
+<!-- LINK TO EXTERNAL JAVASCRIPT -->
+<script src="game.js"></script>
+</body>
+</html>

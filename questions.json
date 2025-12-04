@@ -1,0 +1,30 @@
+{
+    "Morning": [
+        { "q": "Fog reduces visibility. What happens to humidity?", "options": ["Rises significantly", "Drops to zero", "Stays constant"], "ans": 0, "stat": "env" },
+        { "q": "Dew covers the leaves. Who drinks this water?", "options": ["Insects", "Large rocks", "Fish"], "ans": 0, "stat": "health" },
+        { "q": "Which layer gets sunlight first?", "options": ["Emergent", "Forest Floor", "Understory"], "ans": 0, "stat": "env" },
+        { "q": "Plants use sunlight for...", "options": ["Photosynthesis", "Digestion", "Sleep"], "ans": 0, "stat": "energy" },
+        { "q": "Howler monkeys call to...", "options": ["Mark territory", "Attract rain", "Scare fish"], "ans": 0, "stat": "energy" }
+    ],
+    "Noon": [
+        { "q": "It is hottest now. How do plants conserve water?", "options": ["Close stomata", "Shed bark", "Grow faster"], "ans": 0, "stat": "energy" },
+        { "q": "Direct sunlight can cause...", "options": ["Leaf scorching", "Instant freezing", "Root rot"], "ans": 0, "stat": "health" },
+        { "q": "Animals seek shade to avoid...", "options": ["Overheating", "Getting wet", "Moonlight"], "ans": 0, "stat": "energy" },
+        { "q": "Heat rises, causing what kind of rain?", "options": ["Convectional", "Snow", "Hail"], "ans": 0, "stat": "env" },
+        { "q": "The canopy protects the floor from...", "options": ["Direct heat", "Air", "Insects"], "ans": 0, "stat": "env" }
+    ],
+    "Evening": [
+        { "q": "Temperatures drop. Humidity usually...", "options": ["Increases relative to temp", "Disappears", "Becomes toxic"], "ans": 0, "stat": "env" },
+        { "q": "Diurnal animals are now...", "options": ["Finding shelter", "Waking up", "Hunting"], "ans": 0, "stat": "energy" },
+        { "q": "Frogs begin calling. Why?", "options": ["Mating/Territory", "They are cold", "To sleep"], "ans": 0, "stat": "env" },
+        { "q": "Shadows lengthen. Predatory cats...", "options": ["Start hunting", "Go to sleep", "Sunbathe"], "ans": 0, "stat": "health" },
+        { "q": "The setting sun reduces...", "options": ["Photosynthesis", "Respiration", "Gravity"], "ans": 0, "stat": "energy" }
+    ],
+    "Night": [
+        { "q": "It is dark. Plants now mostly...", "options": ["Respire", "Photosynthesize", "Bloom"], "ans": 0, "stat": "energy" },
+        { "q": "Bats use what to navigate?", "options": ["Echolocation", "Flashlights", "Heat vision"], "ans": 0, "stat": "env" },
+        { "q": "Nocturnal flowers are usually...", "options": ["Pale/White", "Bright Red", "Invisible"], "ans": 0, "stat": "env" },
+        { "q": "The forest floor is now...", "options": ["Teeming with predators", "Empty", "Hot"], "ans": 0, "stat": "health" },
+        { "q": "Bioluminescence is used for...", "options": ["Attracting mates", "Heating", "Cooking"], "ans": 0, "stat": "energy" }
+    ]
+}
